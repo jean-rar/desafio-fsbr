@@ -14,6 +14,7 @@
       <td scope="col">Nome</th>
       <td scope="col">E-mail</th>
       <td scope="col">Idade</th>
+      <td scope="col">Ação</th>
     </tr>
   </thead>
   <tbody>
@@ -23,6 +24,10 @@
       <td>{{$dado['nome']}}</td> 
       <td>{{$dado['email']}}</td>
       <td>{{$dado['idade']}}</td>
+      <td>
+        <a type="button" class="btn btn-danger" href="">Excluir</a>
+        <a type="button" class="btn btn-primary" href="">Editar</a>
+      </td>
     </tr>
     @endforeach
   </tbody>
