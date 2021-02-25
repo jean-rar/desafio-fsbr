@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
   <head>
     <title>Desafio FBSN</title>
@@ -25,13 +24,26 @@
       <td>{{$dado['email']}}</td>
       <td>{{$dado['idade']}}</td>
       <td>
-        <a type="button" class="btn btn-danger" href="">Excluir</a>
         <a type="button" class="btn btn-primary" href="">Editar</a>
+        <a type="button" class="btn btn-danger" href="delete/$dado['id']}}">Delete</a>
       </td>
     </tr>
     @endforeach
   </tbody>
 </table>
+<hr>
+<div>
+  {{ $dados->links() }}
+</div>
+<hr>
+
+<!-- <nav aria-label="Page navigation example">
+  <ul class="pagination">
+    
+  </ul>
+</nav> -->
+
+
 <a type="button" class="btn btn-primary" href="{{ route('form.create') }}">Incluir</a>
   </body>
 </html>

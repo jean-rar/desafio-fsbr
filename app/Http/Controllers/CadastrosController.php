@@ -10,7 +10,7 @@ class CadastrosController extends Controller
 
     public function index()
     {
-        return view ('index', ['dados' => Cadastros::get()->toArray()]);
+        return view ('index', ['dados' => Cadastros::simplePaginate(1)]);
     }
 
 
@@ -58,9 +58,11 @@ class CadastrosController extends Controller
     }
 
 
-    public function destroy($id)
+    public function delete($id)
     {
+        dd($id);
         $cadastro = Cadastros::find($id);
         $cadastro->delete();
+        return redirect('/index')->with('msg', 'registro deletado');
     }
 }

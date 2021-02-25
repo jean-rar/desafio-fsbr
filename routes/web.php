@@ -23,3 +23,5 @@ Route::resource('form', 'App\Http\Controllers\CadastrosController');
 Route::post('cadastro.formulario', [CadastrosController::class, 'store'])->name('cadastro.formulario');
 
 Route::get('/', [CadastrosController::class, 'index']);
+
+Route::get('/cadastro/{id}', [CadastrosController::class, 'delete']);
