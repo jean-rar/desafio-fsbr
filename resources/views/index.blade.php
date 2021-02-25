@@ -25,7 +25,7 @@
       <td>{{$dado['idade']}}</td>
       <td>
         <a type="button" class="btn btn-primary" href="">Editar</a>
-        <a type="button" class="btn btn-danger" href="delete/$dado['id']}}">Delete</a>
+        <a type="button" class="btn btn-danger" href="/cadastro/delete/{{$dado['id']}}">Delete</a>
       </td>
     </tr>
     @endforeach

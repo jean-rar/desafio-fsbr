@@ -60,7 +60,6 @@ class CadastrosController extends Controller
 
     public function delete($id)
     {
-        dd($id);
         $cadastro = Cadastros::find($id);
         $cadastro->delete();
         return redirect('/index')->with('msg', 'registro deletado');
