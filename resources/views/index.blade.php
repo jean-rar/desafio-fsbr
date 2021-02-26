@@ -24,7 +24,7 @@
       <td>{{$dado['email']}}</td>
       <td>{{$dado['idade']}}</td>
       <td>
-        <a type="button" class="btn btn-primary" href="">Editar</a>
+        <a type="button" class="btn btn-primary" href="cadastro/editar/{{$dado['id']}}">Edit</a>
         <a type="button" class="btn btn-danger" href="/cadastro/delete/{{$dado['id']}}">Delete</a>
       </td>
     </tr>
@@ -36,13 +36,6 @@
   {{ $dados->links() }}
 </div>
 <hr>
-
-<!-- <nav aria-label="Page navigation example">
-  <ul class="pagination">
-    
-  </ul>
-</nav> -->
-
 
 <a type="button" class="btn btn-primary" href="{{ route('form.create') }}">Incluir</a>
   </body>

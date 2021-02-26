@@ -39,21 +39,16 @@ class CadastrosController extends Controller
         return view('formulario');
     }
 
-    // /**
-    //  * Show the form for editing the specified resource.
-    //  *
-    //  * @param  int  $id
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function edit($id)
-    // {
-    //     //
-    // }
+    public function edit($id)
+    {
+        $dado = Cadastros::find($id)->get();
+        return redirect()->route('cadastro.editar', compact('dado', 'id'));
+    }
 
 
     public function update(Request $request, $id)
     {
-        $cadastro = Cadastros::find($id);
+        $cadastro = Cadastros::find($id)->get;
         $cadastro->update($request->all());
     }
 

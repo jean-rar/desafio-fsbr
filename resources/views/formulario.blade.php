@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-
 <html lang="pt-br">
   <head>
     <title>Desafio FBSN</title>
     <meta charset="utf-8">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <style>
+      body{
+        margin-left: 30%;
+        margin-right: 30%;
+      }
+    </style>
+
   </head>
   <body>
     <form action="{{ route('cadastro.formulario') }}" method="post">
@@ -21,6 +27,7 @@
             <label for="age">Age</label>
             <input type="age" name="age" class="form-control">
         </div>
+        <hr>
         <button type="submit" class="btn btn-primary">Submit</button>
         <a type="button" class="btn btn-primary" href="/">Cancelar</a>
     </form>

@@ -25,3 +25,5 @@ Route::post('cadastro.formulario', [CadastrosController::class, 'store'])->name(
 Route::get('/', [CadastrosController::class, 'index'])->name('index');
 
 Route::get('/cadastro/delete/{id}', [CadastrosController::class, 'delete']);
+
+Route::get('/cadastro/editar/{id}', [CadastrosController::class, 'edit'])->name('cadastro.editar');
